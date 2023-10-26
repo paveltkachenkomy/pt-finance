@@ -1,0 +1,28 @@
+{
+	"name": "@pt-finance/pt-finance",
+	"version": "1.0.0",
+	"description": "Сервис-бот для ведения личного финансового учета",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/paveltkachenkomy/pt-finance.git"
+	},
+	"keywords": [],
+	"author": {
+		"name": "Pavel Tkachenko",
+		"email": "paveltkachenko.my@gmail.com"
+	},
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/paveltkachenkomy/pt-finance/issues"
+	},
+	"homepage": "https://github.com/paveltkachenkomy/pt-finance#readme",
+	"workspaces": [
+		"packages/bot",
+		"packages/common",
+		"packages/server",
+		"packages/client"
+	]
+}

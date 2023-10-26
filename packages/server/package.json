@@ -1,0 +1,14 @@
+{
+	"name": "@pt-finance/server",
+	"version": "1.0.0",
+	"description": "Сервер раздачи статических файлов и обработки части логики сервис-бота для ведения личного финансового учета",
+	"main": "./build/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": {
+		"name": "Pavel Tkachenko",
+		"email": "paveltkachenko.my@gmail.com"
+	},
+	"license": "ISC"
+}
