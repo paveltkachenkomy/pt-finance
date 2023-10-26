@@ -3,14 +3,18 @@
 	"version": "1.0.0",
 	"description": "Общая библиотека сервис-бота для ведения личного финансового учета",
 	"main": "./build/index.js",
+	"types": "./build/index.d.ts",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"build": "npx -p typescript tsc -p ./tsconfig.json"
 	},
 	"author": {
 		"name": "Pavel Tkachenko",
 		"email": "paveltkachenko.my@gmail.com"
 	},
 	"license": "ISC",
-	"devDependencies": {},
-	"dependencies": {}
+	"devDependencies": {
+		"@types/node": "^20.8.9",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.2.2"
+	}
 }

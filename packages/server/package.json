@@ -4,11 +4,19 @@
 	"description": "Сервер раздачи статических файлов и обработки части логики сервис-бота для ведения личного финансового учета",
 	"main": "./build/index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"start": "node ./build/index.ts",
+		"start:dev": "ts-node ./src/index.ts",
+		"prestart": "npm run build",
+		"build": "npx -p typescript tsc -p ./tsconfig.json"
 	},
 	"author": {
 		"name": "Pavel Tkachenko",
 		"email": "paveltkachenko.my@gmail.com"
 	},
-	"license": "ISC"
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^20.8.9",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.2.2"
+	}
 }

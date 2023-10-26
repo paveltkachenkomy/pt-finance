@@ -3,7 +3,9 @@
 	"version": "1.0.0",
 	"description": "Сервис-бот для ведения личного финансового учета",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"start": "npm run start --workspaces --if-present",
+		"build": "npm run build --workspaces",
+		"start:dev": "npm run start:dev --workspaces --if-present"
 	},
 	"repository": {
 		"type": "git",
