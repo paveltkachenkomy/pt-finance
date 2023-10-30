@@ -1,3 +1,6 @@
-import {Utils} from "@pt-finance/common";
+import { Utils, cfg} from "@pt-finance/common";
 
-Utils.Logger.info("Hi! This is Server");
+// Подключаем обработку переменных окружения
+cfg();
+console.log(process.env)
+

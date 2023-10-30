@@ -6,6 +6,7 @@
 	"types": "./build/index.d.ts",
 	"scripts": {
 		"preinstall": "npm run build",
+
 		"build": "npx -p typescript tsc -p ./tsconfig.json"
 	},
 	"author": {
@@ -19,6 +20,8 @@
 		"typescript": "^5.2.2"
 	},
 	"dependencies": {
+		"dotenv": "^16.3.1",
+		"dotenv-cli": "^7.3.0",
 		"moment": "^2.29.4"
 	}
 }

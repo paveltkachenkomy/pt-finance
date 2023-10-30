@@ -25,20 +25,28 @@ export class Logger {
 	private print(message: string, level: LogLevel): void {
 		switch (level) {
 			case LogLevel.ERROR: {
-				console.error(`[${this.timestamp()}] [${LogLevel.ERROR}] - ${message}`);
+				if (process.env.LOGLEVEL_ERROR === "true") {
+					console.error(`[${this.timestamp()}] [${LogLevel.ERROR}] - ${message}`);
+				}
 				break;
 			}
 			case LogLevel.WARN: {
-				console.warn(`[${this.timestamp()}] [${LogLevel.WARN}] - ${message}`);
+				if (process.env.LOGLEVEL_WARN === "true") {
+					console.warn(`[${this.timestamp()}] [${LogLevel.WARN}] - ${message}`);
+				}
 				break;
 			}
 			case LogLevel.INFO: {
-				console.error(`[${this.timestamp()}] [${LogLevel.INFO}] - ${message}`);
+				if (process.env.LOGLEVEL_INFO === "true") {
+					console.error(`[${this.timestamp()}] [${LogLevel.INFO}] - ${message}`);
+				}
 				break;
 			}
 			case LogLevel.LOG: 
 			default: {
-				console.error(`[${this.timestamp()}] [${LogLevel.LOG}] - ${message}`);
+				if (process.env.LOGLEVEL_LOG === "true") {
+					console.error(`[${this.timestamp()}] [${LogLevel.LOG}] - ${message}`);
+				}
 				break;
 			}
 		}
