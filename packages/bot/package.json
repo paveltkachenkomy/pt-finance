@@ -20,6 +20,7 @@
 		"typescript": "^5.2.2"
 	},
 	"dependencies": {
-		"@pt-finance/common": "file:../common"
+		"@pt-finance/common": "file:../common",
+		"telegraf": "^4.15.0"
 	}
 }

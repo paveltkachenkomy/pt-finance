@@ -4,3 +4,5 @@
 **/.vscode
 **/configs/*
 !**/configs/exemple.env
+packages/common/**/**.js
+packages/common/**/**.d.ts

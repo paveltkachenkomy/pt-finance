@@ -2,12 +2,14 @@
 	"name": "@pt-finance/common",
 	"version": "1.0.0",
 	"description": "Общая библиотека сервис-бота для ведения личного финансового учета",
-	"main": "./build/index.js",
-	"types": "./build/index.d.ts",
+	"main": "./index.js",
+	"types": "./index.d.ts",
 	"scripts": {
 		"preinstall": "npm run build",
-
-		"build": "npx -p typescript tsc -p ./tsconfig.json"
+		"build": "npx -p typescript tsc -p ./tsconfig.json",
+		"prisma:migrate": "dotenv -e ../../configs/$NODE_ENV.env -- npx prisma migrate $MIGRATE",
+		"prisma:migrate:dev": "NODE_ENV=development MIGRATE=dev npm run prisma:migrate",
+		"prisma:studio:dev": "NODE_ENV=development && dotenv -e ./configs/.env.$NODE_ENV -- npx prisma studio"
 	},
 	"author": {
 		"name": "Pavel Tkachenko",
@@ -16,10 +18,12 @@
 	"license": "ISC",
 	"devDependencies": {
 		"@types/node": "^20.8.9",
+		"prisma": "^5.5.2",
 		"ts-node": "^10.9.1",
 		"typescript": "^5.2.2"
 	},
 	"dependencies": {
+		"@prisma/client": "^5.5.2",
 		"dotenv": "^16.3.1",
 		"dotenv-cli": "^7.3.0",
 		"moment": "^2.29.4"
