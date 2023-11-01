@@ -2,7 +2,7 @@
 **/build
 **/.idea
 **/.vscode
-**/configs/*
+**/configs/**
 !**/configs/exemple.env
 packages/common/**/**.js
 packages/common/**/**.d.ts
